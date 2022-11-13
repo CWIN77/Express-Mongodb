@@ -16,7 +16,13 @@ app.use(cors());
 app.use(compression());
 
 const goal = require("./src/goal");
+// const home = require("./src/home");
 
-app.use("/", goal);
+// app.use("/goal", goal);
+app.use("/api/goal", goal);
 
-module.exports = app;
+const PORT = process.env.PORT || 3000;
+
+app.listen(PORT, () => {
+  console.log(`Server on ${PORT} port`);
+});
