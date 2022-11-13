@@ -21,7 +21,7 @@ const goal = require("./src/goal");
 // app.use("/goal", goal);
 app.use("/api/goal", goal);
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 9090;
 
 app.listen(PORT, () => {
   console.log(`Server on ${PORT} port`);
