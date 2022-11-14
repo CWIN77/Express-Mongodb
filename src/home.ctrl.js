@@ -2,7 +2,7 @@ const connectDB = require('../config/db');
 
 const getRes = (req, res) => {
   connectDB();
-  res.send("Hello User!");
+  res.status(200).json("Called!");
 };
 
 module.exports = { getRes };
