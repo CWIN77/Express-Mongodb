@@ -4,9 +4,7 @@ const app = express();
 const helmet = require('helmet');
 const cors = require('cors');
 const compression = require('compression');
-const cron = require('node-cron');
 const dotenv = require('dotenv');
-const fetch = require('node-fetch');
 dotenv.config();
 const connectDB = require('./config/db');
 connectDB();
@@ -35,9 +33,4 @@ const PORT = process.env.PORT || 9000;
 
 app.listen(PORT, () => {
   console.log(`Server on ${PORT} port`);
-  // cron.schedule('* * * * *', async () => {
-  //   const response = await fetch("https://express-mongodb-eta.vercel.app/");
-  //   const data = await response.json();
-  //   console.log(data);
-  // });
 });
