@@ -35,7 +35,7 @@ const PORT = process.env.PORT || 9000;
 
 app.listen(PORT, () => {
   console.log(`Server on ${PORT} port`);
-  cron.schedule('* */10 * * * *', async () => {
+  cron.schedule('* */8 * * * *', async () => {
     const response = await fetch("https://express-mongodb-eta.vercel.app");
     const data = await response.json();
     console.log(data);
