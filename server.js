@@ -13,13 +13,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(helmet());
 
-app.use(cors({
-  origin: [
-    'http://localhost:3000',
-    'http://localhost:8080',
-    'https://express-mongodb-eta.vercel.app'
-  ]
-}));
+app.use(cors());
 app.use(compression());
 
 const goal = require("./src/goal");
