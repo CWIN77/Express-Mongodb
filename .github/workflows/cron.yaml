@@ -1,0 +1,11 @@
+name: daily-cron
+on:
+  schedule:
+    - cron: '0 1 * * *'
+jobs:
+  cron:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Awake Server
+        run: |
+          curl curl -X GET "https://express-mongodb-eta.vercel.app/"
