@@ -1,3 +1,4 @@
+// vercel에 deploy 하기 위해서는 파일 이름을 index.js로 해야함
 const express = require('express');
 const app = express();
 const helmet = require('helmet');
@@ -22,7 +23,7 @@ const goal = require("./src/goal");
 // app.use("/goal", goal);
 app.use("/goal", goal);
 
-const PORT = process.env.PORT || 9001;
+const PORT = process.env.PORT || 9000;
 
 app.listen(PORT, () => {
   console.log(`Server on ${PORT} port`);
