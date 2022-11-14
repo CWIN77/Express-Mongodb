@@ -3,7 +3,8 @@
 const cluster = require("cluster");
 
 const getRes = (req, res) => {
-  res.status(200).json(cluster.isPrimary);
+  res.status(200).json(cluster);
+  console.log(cluster);
 };
 
 module.exports = { getRes };
