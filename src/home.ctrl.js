@@ -1,10 +1,9 @@
-const connectDB = require('../config/db');
-const { cpus } = require("os");
-const numCPUs = cpus().length;
+// const { cpus } = require("os");
+// const numCPUs = cpus().length;
+const cluster = require("cluster");
 
 const getRes = (req, res) => {
-  connectDB();
-  res.status(200).json(numCPUs);
+  res.status(200).json(cluster.isPrimary);
 };
 
 module.exports = { getRes };
