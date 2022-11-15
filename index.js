@@ -23,7 +23,7 @@ app.use("/goal", goal);
 
 // 성능 체크
 // npm i -g loadtest
-// loadtest http://localhost:3001/api/withcluster -n 1000 -c 100
+// loadtest http://localhost:9000/api/testcluster -n 1000 -c 100
 app.get('/api/testcluster', function (req, res) {
   console.time('noclusterApi');
   const base = 8;
