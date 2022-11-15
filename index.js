@@ -28,7 +28,7 @@ app.get('/api/testcluster', (req, res) => {
   console.time('noclusterApi');
   const base = 8;
   let result = 0;
-  for (let i = Math.pow(base, 7) * 50; i >= 0; i--) {
+  for (let i = Math.pow(base, 7) * 20; i >= 0; i--) {
     result += i + Math.pow(i, 10);
   };
   console.timeEnd('noclusterApi');
