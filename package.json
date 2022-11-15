@@ -7,8 +7,8 @@
     "node": "16.x"
   },
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js",
+    "dev": "pm2 start ecosystem.config.js --only development --env development",
+    "start": "pm2 start ecosystem.config.js --only production --env production",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
